@@ -1,0 +1,33 @@
+
+// BFS
+// for shortest path
+
+vector<vector<int> > edge(200);
+// adjust the size with input constrain.
+
+int bfs(int source, int destination)
+{
+    queue<int> Q;
+    vector<int> level(200, -1);
+    int u, v;
+    Q.push(source);
+    level[source] = 0;
+
+    while(!Q.empty()){
+        u = Q.front();
+        Q.pop();
+
+        for(int K=0; K<edge[u].size(); K++){
+            v = edge[u][K];
+            if(level[v]==-1){
+                level[v] = level[u] + 1;
+                Q.push(v);
+                // can be matched with destination here to get the distance.
+                // Or, can be calculated new persons or nodes comes in
+                // consideration for the first time.
+            }
+        }
+    }
+
+    return distance;
+}
