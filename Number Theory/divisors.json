@@ -1,13 +1,13 @@
 "Divisors": {
     "prefix": "Divisors",
     "body": [
-      "vector<int> Divisors;",
+      "vector<ll> Divisors;",
       "",
-      "void Divisor(int n)",
+      "void Divisor(ll n)",
       "{",
       "    Divisors.clear();",
       "",
-      "    for (int i = 1; i * i <= n; i++)",
+      "    for (int i = 1; (i * i) <= n; i++)",
       "    {",
       "        if (n % i == 0)",
       "        {",
