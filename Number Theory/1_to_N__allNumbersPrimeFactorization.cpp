@@ -1,9 +1,8 @@
-
 #include <bits/stdc++.h>
 using namespace std;
 
-const int mx = 1e8;
 typedef long long int ll;
+const int mx = 1e8;
 
 bitset<mx> is_prime;
 vector<int> primes;
@@ -39,42 +38,36 @@ void sieve(int n)
     }
 }
 
-vector<ll> PrimeFactors;
+vector<vector<int>> PrimeFactors(mx);
 
-void PrimeFactorization(ll n)
+void PrimeFactorization(int n)
 {
-    PrimeFactors.clear();
-    // Call sieve function first for access primes till n
     for (auto p : primes)
     {
-        if (1LL * p * p > n)
+        for (int i = p; i <= n; i += p)
         {
-            break;
-        }
-        else if (n % p == 0)
-        {
-            while (n % p == 0)
-            {
-                PrimeFactors.push_back(p);
-                n /= p;
-            }
+            PrimeFactors[i].push_back(p);
         }
     }
-    if (n > 1)
+
+    for (int i = 1; i <= n; i++)
     {
-        PrimeFactors.push_back(n);
+        cout << i << " : ";
+        for (auto u : PrimeFactors[i])
+        {
+            cout << u << ' ';
+        }
+        cout << endl;
     }
 }
+
 int main()
 {
-    sieve(12345);
+    sieve(1e5);
 
     PrimeFactorization(1000);
 
-    for (auto u : PrimeFactors)
-    {
-        cout << u << ' ';
-    }
-    cout << endl;
+    // 1 to 1000 all numbers Prime Factorization
+
     return 0;
 }
