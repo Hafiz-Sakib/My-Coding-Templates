@@ -60,25 +60,29 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<int> Divisors;
+vector<vector<int>> divisors(mx);
 
-void Divisor(int n)
+void OneToNDivisors(int n)
 {
-    Divisors.clear();
-
-    for (int i = 1; i * i <= n; i++)
+    for (int i = 1; i <= n; i++)
     {
-        if (n % i == 0)
+        for (int j = i; j <= n; j += i)
         {
-            Divisors.push_back(i);
-            if (n / i != i)
-            {
-                Divisors.push_back(n / i);
-            }
+            divisors[j].push_back(i);
         }
     }
 
-    sort(Divisors.begin(), Divisors.end());
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << i << " : ";
+
+    //     for (auto u : divisors[i])
+    //     {
+    //         cout << u << ' ';
+    //     }
+
+    //     cout << endl;
+    // }
 }
 
 int main()

@@ -1,30 +1,47 @@
 "OneToNPrimeFactors": {
     "prefix": "OneToNPrimeFactors",
     "body": [
+      "vector<vector<int>> PrimeFactors(mx);",
       "",
-      "vector<vector<int>> OneToNPrimeFactors(mx);",
-      "",
-      "void OneToNPrimeFactorization(int n)",
+      "void PrimeFactorization(int n)",
       "{",
+      "    // Can Sieve First",
       "    for (auto p : primes)",
       "    {",
       "        for (int i = p; i <= n; i += p)",
       "        {",
-      "            OneToNPrimeFactors[i].push_back(p);",
+      "            PrimeFactors[i].push_back(p);",
       "        }",
       "    }",
       "",
-      "    // for (int i = 1; i <= n; i++)",
-      "    // {",
-      "    //     cout << i << \" : \";",
-      "    //     for (auto u : OneToNPrimeFactors[i])",
-      "    //     {",
-      "    //         cout << u << ' ';",
-      "    //     }",
-      "    //     cout << endl;",
-      "    // }",
-      "}",
-      ""
+      "    for (int i = 1; i <= n; i++)",
+      "    {",
+      "        cout << i << \" : \";",
+      "        for (auto u : PrimeFactors[i])",
+      "        {",
+      "            cout << u << ' ';",
+      "        }",
+      "        cout << endl;",
+      "    }",
+      "}"
     ],
     "description": "OneToNPrimeFactors"
   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
