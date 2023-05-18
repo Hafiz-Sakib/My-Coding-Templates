@@ -33,5 +33,7 @@ void Divisor(int n)
 
 int main()
 {
+    Divisor(152);
+    // All Divisors of 152
     return 0;
 }
