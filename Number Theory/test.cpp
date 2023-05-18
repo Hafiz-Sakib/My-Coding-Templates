@@ -60,25 +60,8 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<ll> Divisors;
-
-void Divisor(ll n)
+void Boom()
 {
-    Divisors.clear();
-
-    for (int i = 1; i * i <= n; i++)
-    {
-        if (n % i == 0)
-        {
-            Divisors.push_back(i);
-            if (n / i != i)
-            {
-                Divisors.push_back(n / i);
-            }
-        }
-    }
-
-    sort(Divisors.begin(), Divisors.end());
 }
 
 int main()

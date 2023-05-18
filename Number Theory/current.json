@@ -175,9 +175,9 @@
     "prefix": "OneToNDivisors",
     "body": [
       "",
-      "vector<vector<int>> Divisors(mx);",
+      "vector<vector<ll>> Divisors(mx);",
       "",
-      "void OneToNDivisors(int n)",
+      "void OneToNDivisors(ll n)",
       "{",
       "    for (int i = 1; i <= n; i++)",
       "    {",
@@ -298,9 +298,9 @@
   "OneToNPrimeFactors": {
     "prefix": "OneToNPrimeFactors",
     "body": [
-      "vector<vector<int>> PrimeFactors(mx);",
+      "vector<vector<ll>> PrimeFactors(mx);",
       "",
-      "void PrimeFactorization(int n)",
+      "void PrimeFactorization(ll n)",
       "{",
       "    // Call Sieve Function First",
       "    for (auto p : primes)",
