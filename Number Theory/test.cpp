@@ -60,7 +60,7 @@ const double eps = 1e-12;
     cin.tie(NULL);                    \
     cout.tie(NULL)
 
-vector<vector<int>> divisors(mx);
+vector<vector<int>> Divisors(mx);
 
 void OneToNDivisors(int n)
 {
@@ -68,26 +68,26 @@ void OneToNDivisors(int n)
     {
         for (int j = i; j <= n; j += i)
         {
-            divisors[j].push_back(i);
+            Divisors[j].push_back(i);
         }
     }
 
-    // for (int i = 1; i <= n; i++)
-    // {
-    //     cout << i << " : ";
+    for (int i = 1; i <= n; i++)
+    {
+        cout << i << " : ";
 
-    //     for (auto u : divisors[i])
-    //     {
-    //         cout << u << ' ';
-    //     }
+        for (auto u : Divisors[i])
+        {
+            cout << u << ' ';
+        }
 
-    //     cout << endl;
-    // }
+        cout << endl;
+    }
 }
 
 int main()
 {
     Boost;
-
+    OneToNDivisors(420);
     return 0;
 }
