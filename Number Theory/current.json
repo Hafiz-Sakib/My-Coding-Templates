@@ -171,6 +171,37 @@
     ],
     "description": "Divisors"
   },
+  "OneToNDivisors": {
+    "prefix": "OneToNDivisors",
+    "body": [
+      "",
+      "vector<vector<int>> Divisors(mx);",
+      "",
+      "void OneToNDivisors(int n)",
+      "{",
+      "    for (int i = 1; i <= n; i++)",
+      "    {",
+      "        for (int j = i; j <= n; j += i)",
+      "        {",
+      "            Divisors[j].push_back(i);",
+      "        }",
+      "    }",
+      "",
+      "    // for (int i = 1; i <= n; i++)",
+      "    // {",
+      "    //     cout << i << \" : \";",
+      "",
+      "    //     for (auto u : Divisors[i])",
+      "    //     {",
+      "    //         cout << u << ' ';",
+      "    //     }",
+      "",
+      "    //     cout << endl;",
+      "    // }",
+      "}"
+    ],
+    "description": "OneToNDivisors"
+  },
   "isprime": {
     "prefix": "isprime",
     "body": [

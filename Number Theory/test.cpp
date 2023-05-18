@@ -72,17 +72,17 @@ void OneToNDivisors(int n)
         }
     }
 
-    for (int i = 1; i <= n; i++)
-    {
-        cout << i << " : ";
+    // for (int i = 1; i <= n; i++)
+    // {
+    //     cout << i << " : ";
 
-        for (auto u : Divisors[i])
-        {
-            cout << u << ' ';
-        }
+    //     for (auto u : Divisors[i])
+    //     {
+    //         cout << u << ' ';
+    //     }
 
-        cout << endl;
-    }
+    //     cout << endl;
+    // }
 }
 
 int main()
